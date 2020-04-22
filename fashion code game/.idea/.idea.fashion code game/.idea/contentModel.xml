@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\boyds\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\boyds\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_fashion code game.-2102737025.00" t="ExcludeRecursive" />
+    <e p="E:\fashion-code\fashion code game" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="NavMeshComponents" t="Include">
+          <e p="Editor" t="Include">
+            <e p="NavMeshAssetManager.cs" t="Include" />
+            <e p="NavMeshComponentsEditor.asmdef" t="Include" />
+            <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+            <e p="NavMeshLinkEditor.cs" t="Include" />
+            <e p="NavMeshModifierEditor.cs" t="Include" />
+            <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+            <e p="NavMeshSurfaceEditor.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="NavMeshComponents.asmdef" t="Include" />
+            <e p="NavMeshLink.cs" t="Include" />
+            <e p="NavMeshModifier.cs" t="Include" />
+            <e p="NavMeshModifierVolume.cs" t="Include" />
+            <e p="NavMeshSurface.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="CodeEditorController.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
+        </e>
+        <e p="Tests" t="Include">
+          <e p="Editor" t="Include">
+            <e p="NavMeshComponentsTestsEditmode.asmdef" t="Include" />
+            <e p="NavMeshModifierVolumeInPrefabTests.cs" t="Include" />
+            <e p="NavMeshSurfaceInPrefabTests.cs" t="Include" />
+            <e p="NavMeshSurfaceInPrefabVariantTests.cs" t="Include" />
+            <e p="PrefabSavingUtil.cs" t="Include" />
+            <e p="PrefabStageAutoSavingUtil.cs" t="Include" />
+          </e>
+          <e p="NavMeshComponentsTestsPlaymode.asmdef" t="Include" />
+          <e p="NavMeshSurfaceAgentTests.cs" t="Include" />
+          <e p="NavMeshSurfaceLinkTests.cs" t="Include" />
+          <e p="NavMeshSurfaceModifierTests.cs" t="Include" />
+          <e p="NavMeshSurfaceModifierVolumeTests.cs" t="Include" />
+          <e p="NavMeshSurfaceTests.cs" t="Include" />
+        </e>
+      </e>
+      <e p="fashion code game.sln" t="IncludeFlat" />
+      <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsTestsEditmode.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsTestsPlaymode.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
