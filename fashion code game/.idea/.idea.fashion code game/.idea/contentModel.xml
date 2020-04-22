@@ -26,7 +26,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CodeEditorController.cs" t="Include" />
-          <e p="PlayerController.cs" t="Include" />
+          <e p="IsometricPlayerMovementController.cs" t="Include" />
         </e>
         <e p="Tests" t="Include">
           <e p="Editor" t="Include">
