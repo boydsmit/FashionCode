@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\boyds\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\boyds\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_fashion code game.-2102737025.00" t="ExcludeRecursive" />
-    <e p="E:\fashion-code\fashion code game" t="IncludeRecursive">
+    <e p="C:\Users\joshu\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\joshu\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_fashion code game.473650410.00" t="ExcludeRecursive" />
+    <e p="C:\Users\joshu\OneDrive\Documenten\proef bekwaamheid\fashion-code\fashion code game" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="NavMeshComponents" t="Include">
@@ -27,6 +27,7 @@
         <e p="Scripts" t="Include">
           <e p="CodeEditorController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="RandomSpriteGenerator.cs" t="Include" />
         </e>
         <e p="Tests" t="Include">
           <e p="Editor" t="Include">
