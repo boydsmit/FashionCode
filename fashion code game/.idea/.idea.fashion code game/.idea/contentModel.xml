@@ -26,12 +26,8 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CodeEditorController.cs" t="Include" />
-<<<<<<< HEAD
           <e p="IsometricPlayerMovementController.cs" t="Include" />
-=======
-          <e p="PlayerController.cs" t="Include" />
           <e p="RandomSpriteGenerator.cs" t="Include" />
->>>>>>> d68dc51ce29798f45a10b6eaebbe738e695aa0d3
         </e>
         <e p="Tests" t="Include">
           <e p="Editor" t="Include">
@@ -56,7 +52,7 @@
       <e p="NavMeshComponentsTestsEditmode.csproj" t="IncludeRecursive" />
       <e p="NavMeshComponentsTestsPlaymode.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
-      <e p="packages" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>

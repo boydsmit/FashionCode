@@ -165,8 +165,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe228dab5f7db74e82139f2219eced9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shirt_Short_Sleeves: {fileID: 21300000, guid: fa10def4936c6cc49a52b7e6d3b403c5,
-    type: 3}
+  prefabs:
+  - {fileID: 839413899585503436, guid: 655fef3b6049eab4590b03ec7424a466, type: 3}
+  - {fileID: 4810818103843421602, guid: ac67cfd6fa2dc52468a21fefbc7fbc76, type: 3}
+  - {fileID: 4667509256767053612, guid: a7714362d48be734a9e069296a589975, type: 3}
+  - {fileID: 5732623519252136046, guid: f9b75e45ea71bfb4da52c6afb0bc153d, type: 3}
+  - {fileID: 9204701337672479070, guid: aba0cdba251b4dd49b92e56b89ec9407, type: 3}
+  - {fileID: 5404437640831698713, guid: c7e67fbb0b72fc84b92296afa65a4774, type: 3}
+  - {fileID: 2919110736069239484, guid: 417f6dace367fe5419ef9c0b9b202655, type: 3}
+  - {fileID: 1826211807571172659, guid: f46820aa1ba66274f958f8d5c71d2e83, type: 3}
+  - {fileID: 4120455371445590595, guid: 2123082f0527f56489f38aa0c64190dc, type: 3}
+  - {fileID: 5810159821826505095, guid: 91764c15a24fb1f4e9365cdfdc4724c9, type: 3}
+  - {fileID: 8552723984139440889, guid: 1e81b5614c803344089a57fa99275b09, type: 3}
+  - {fileID: 2353689361558241229, guid: cc930738cabbd8d479292f7cdc7ae697, type: 3}
+  - {fileID: 4620008724603192246, guid: 4171daf2baffc404d92c0e4274f52d46, type: 3}
+  - {fileID: 4670684650646617315, guid: c0f0e1f95d3993149b2a9d258c074e31, type: 3}
 --- !u!212 &479229745
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -211,7 +224,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.24, y: 1.58}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -324,8 +337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38db44b1b760eb84782fbeb24695d2ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 963194227}
-  agent: {fileID: 692302317}
 --- !u!195 &692302317
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -765,7 +776,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad59ce2b7d18fab43b9b5cdef77dd95e, type: 2}
+  - {fileID: 2100000, guid: 62b1007e991b0474d8387e8ecab3e25f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -860,7 +871,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad59ce2b7d18fab43b9b5cdef77dd95e, type: 2}
+  - {fileID: 2100000, guid: 715debad8233f334c9b8d35b8802c36a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
