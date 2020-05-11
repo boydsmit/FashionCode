@@ -9,16 +9,37 @@
         <e p="link.xml" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CodeEditorController.cs" t="Include" />
+<<<<<<< HEAD
           <e p="Commands" t="Include">
             <e p="CommandInfo.cs" t="Include" />
           </e>
           <e p="IsometricPlayerMovementController.cs" t="Include" />
           <e p="RandomSpriteGenerator.cs" t="Include" />
+=======
+          <e p="IsometricPlayerMovementController.cs" t="Include" />
+          <e p="RandomSpriteGenerator.cs" t="Include" />
+        </e>
+        <e p="Tests" t="Include">
+          <e p="Editor" t="Include">
+            <e p="NavMeshComponentsTestsEditmode.asmdef" t="Include" />
+            <e p="NavMeshModifierVolumeInPrefabTests.cs" t="Include" />
+            <e p="NavMeshSurfaceInPrefabTests.cs" t="Include" />
+            <e p="NavMeshSurfaceInPrefabVariantTests.cs" t="Include" />
+            <e p="PrefabSavingUtil.cs" t="Include" />
+            <e p="PrefabStageAutoSavingUtil.cs" t="Include" />
+          </e>
+          <e p="NavMeshComponentsTestsPlaymode.asmdef" t="Include" />
+          <e p="NavMeshSurfaceAgentTests.cs" t="Include" />
+          <e p="NavMeshSurfaceLinkTests.cs" t="Include" />
+          <e p="NavMeshSurfaceModifierTests.cs" t="Include" />
+          <e p="NavMeshSurfaceModifierVolumeTests.cs" t="Include" />
+          <e p="NavMeshSurfaceTests.cs" t="Include" />
+>>>>>>> b3de96711048b4122c9196b8b65a1e9aa566a847
         </e>
       </e>
       <e p="fashion code game.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
-      <e p="packages" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
