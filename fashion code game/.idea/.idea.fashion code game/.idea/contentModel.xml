@@ -7,15 +7,29 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="link.xml" t="Include" />
+        <e p="NavMeshComponents" t="Include">
+          <e p="Editor" t="Include">
+            <e p="NavMeshAssetManager.cs" t="Include" />
+            <e p="NavMeshComponentsEditor.asmdef" t="Include" />
+            <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+            <e p="NavMeshLinkEditor.cs" t="Include" />
+            <e p="NavMeshModifierEditor.cs" t="Include" />
+            <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+            <e p="NavMeshSurfaceEditor.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="NavMeshComponents.asmdef" t="Include" />
+            <e p="NavMeshLink.cs" t="Include" />
+            <e p="NavMeshModifier.cs" t="Include" />
+            <e p="NavMeshModifierVolume.cs" t="Include" />
+            <e p="NavMeshSurface.cs" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="CodeEditorController.cs" t="Include" />
-<<<<<<< HEAD
           <e p="Commands" t="Include">
             <e p="CommandInfo.cs" t="Include" />
           </e>
-          <e p="IsometricPlayerMovementController.cs" t="Include" />
-          <e p="RandomSpriteGenerator.cs" t="Include" />
-=======
           <e p="IsometricPlayerMovementController.cs" t="Include" />
           <e p="RandomSpriteGenerator.cs" t="Include" />
         </e>
@@ -34,12 +48,15 @@
           <e p="NavMeshSurfaceModifierTests.cs" t="Include" />
           <e p="NavMeshSurfaceModifierVolumeTests.cs" t="Include" />
           <e p="NavMeshSurfaceTests.cs" t="Include" />
->>>>>>> b3de96711048b4122c9196b8b65a1e9aa566a847
         </e>
       </e>
       <e p="fashion code game.sln" t="IncludeFlat" />
+      <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsTestsEditmode.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsTestsPlaymode.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
-      <e p="Packages" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>

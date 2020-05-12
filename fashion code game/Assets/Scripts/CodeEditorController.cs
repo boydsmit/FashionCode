@@ -14,33 +14,58 @@ public class CodeEditorController : MonoBehaviour
         using (StreamReader r = new StreamReader(@"Assets\Scripts\Commands\Commands.json"))
         {
             string json = r.ReadToEnd();
-            print(json);
             _commandInfoList = JsonConvert.DeserializeObject<List<CommandInfo>>(json);
         }
+
         _inputField = gameObject.GetComponent<InputField>();
     }
 
     public void OnButtonClick()
-    {
-        string[] writtenCode = _inputField.text.Split('\n');
-        string[] codeSpaghettiMode = {"Neck.Sew"};
-        string[] optionsSpaghettiMode = {"Red", "Green", "Blue"};
+    {    
+        var codeInputByLine = _inputField.text.Split('\n');
 
-        // XmlReader xmlReader = new XmlReader();
-        //
-        // xmlReader.CreateCommandInfo(@"Assets\Scripts\Commands\Commands.xml", "command");
-        
-        for (int i = 0; i < writtenCode.Length; i++)
+        foreach (var codeLine in codeInputByLine)
         {
-            if (writtenCode[i].Contains(codeSpaghettiMode[i] + '('))
-            {
-                string parameter = writtenCode[i].Replace(codeSpaghettiMode[i] + "(", "");
-                foreach (var option in optionsSpaghettiMode)
+            foreach (var commandInfo in _commandInfoList)
+            {    
+                var executor = commandInfo.GetExecutor() + "(";
+                
+                if (!codeLine.Contains(executor)) continue;
+                
+                var parameter = codeLine.Replace(executor, "");
+                parameter = parameter.Replace(")", "");
+                if (commandInfo.GetOptionsType() != "Color")
                 {
-                    if (option == parameter.Replace(")", ""))
+                    var foundOption = commandInfo.GetOptions().Find(option => 
+                    option == parameter);
+
+                    switch (commandInfo.GetExecutor().Split('.')[0])
                     {
-                        print("The parameter was: " + option);
-                    }    
+                        //todo: add functions for each case
+                        case "Neck":
+                            break;
+                        
+                        case "Sleeve": 
+                            break;
+                        
+                        case "TrouserLegs":
+                            break;
+                        
+                        case "Skirt":
+                            break;
+                        
+                        case "Pattern":
+                            break;
+                    }
+                    print(foundOption);
+                }
+                else
+                {
+                    if (commandInfo.GetOptionsMap().ContainsKey(parameter))
+                    {
+                        print("color changed to " + parameter);
+                        //todo: execute color changer with key value
+                    }
                 }
             }
         }
