@@ -1,0 +1,76 @@
+  [
+  {
+    "executor": "Neck.Sew",
+    "optionsType": "Variants",
+    "options": [
+      "turtleNeck",
+      "v-Neck",
+      "crew-Neck"
+    ]
+  },
+  {
+    "executor": "Sleeve.Sew",
+    "optionsType": "Length",
+    "options": [
+      "short",
+      "long"
+    ]
+  },
+  {
+    "executor": "TrouserLegs.CutTo",
+    "optionsType": "Length",
+    "options": [
+      "short",
+      "medium",
+      "long"
+    ]
+  },
+  {
+    "executor": "Skirt.CutTo",
+    "optionsType": "Length",
+    "options": [
+      "short",
+      "medium",
+      "long"
+    ]
+  },
+  {
+    "executor": "Pattern.set",
+    "optionsType": "patterns",
+    "options": [
+      "stripes",
+      "dots",
+      "stars",
+      "flowers",
+      "tartan"
+    ]
+  },
+  {
+    "executor": "Color_1.set",
+    "optionsType": "Color",
+    "optionsMap": {
+      "purple":"#B365E5",
+      "blue":"#4F42F5",
+      "cyan": "#61F6FF",
+      "green": "#7DEA3D",
+      "yellow": "#FFEA45",
+      "pink": "#FF61A2",
+      "orange": "#FFA61E",
+      "red": "#D9221C"
+    }
+  },
+  {
+    "executor": "Color_2.set",
+    "optionsType": "PatternColor",
+    "optionsMap": {
+      "purple":"#B365E5",
+      "blue":"#4F42F5",
+      "cyan": "#61F6FF",
+      "green": "#7DEA3D",
+      "yellow": "#FFEA45",
+      "pink": "#FF61A2",
+      "orange": "#FFA61E",
+      "red": "#D9221C"
+    }
+  }
+]
