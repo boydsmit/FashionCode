@@ -1,35 +1,33 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-
-public class CommandInfo
-{    
-    [JsonProperty("executor")]
-    private string _executor;
-    [JsonProperty("optionsType")]
-    private string _optionsType;
-    [JsonProperty("options")]
-    private List<string> _options;
-    [JsonProperty("optionsMap")]
-    private Dictionary<string, string> _optionsMap;
-
-    public string GetExecutor()
+namespace Commands
+{
+    public class CommandInfo
     {
-        return _executor;
-    }
+        [JsonProperty("executor")] private string _executor;
+        [JsonProperty("optionsType")] private string _optionsType;
+        [JsonProperty("options")] private List<string> _options;
+        [JsonProperty("optionsMap")] private Dictionary<string, string> _optionsMap;
 
-    public string GetOptionsType()
-    {
-        return _optionsType;
-    }
+        public string GetExecutor()
+        {
+            return _executor;
+        }
 
-    public List<string> GetOptions()
-    {
-        return _options;
-    }
+        public string GetOptionsType()
+        {
+            return _optionsType;
+        }
 
-    public Dictionary<string, string> GetOptionsMap()
-    {
-        return _optionsMap;
+        public List<string> GetOptions()
+        {
+            return _options;
+        }
+
+        public Dictionary<string, string> GetOptionsMap()
+        {
+            return _optionsMap;
+        }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using Clothing;
+using Commands;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,12 +10,14 @@ public class CodeEditorController : MonoBehaviour
 {
     private InputField _inputField;
     private List<CommandInfo> _commandInfoList;
+    private ClothingManager _clothingManager;
 
     private void Start()
     {
         using (StreamReader r = new StreamReader(@"Assets\Scripts\Commands\Commands.json"))
         {
             string json = r.ReadToEnd();
+            _clothingManager = gameObject.GetComponent<ClothingManager>();
             _commandInfoList = JsonConvert.DeserializeObject<List<CommandInfo>>(json);
         }
 
@@ -41,11 +45,12 @@ public class CodeEditorController : MonoBehaviour
 
                     switch (commandInfo.GetExecutor().Split('.')[0])
                     {
-                        //todo: add functions for each case
+                        //todo: add functions for each case    
                         case "Neck":
                             break;
                         
-                        case "Sleeve": 
+                        case "Sleeve":
+                            _clothingManager.ChangeSleeve(foundOption);
                             break;
                         
                         case "TrouserLegs":
@@ -57,13 +62,11 @@ public class CodeEditorController : MonoBehaviour
                         case "Pattern":
                             break;
                     }
-                    print(foundOption);
                 }
                 else
                 {
                     if (commandInfo.GetOptionsMap().ContainsKey(parameter))
                     {
-                        print("color changed to " + parameter);
                         //todo: execute color changer with key value
                     }
                 }

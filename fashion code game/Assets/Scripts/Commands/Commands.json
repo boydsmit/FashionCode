@@ -3,17 +3,17 @@
     "executor": "Neck.Sew",
     "optionsType": "Variants",
     "options": [
-      "TurtleNeck",
-      "V-Neck",
-      "Crew-Neck"
+      "turtleNeck",
+      "v-Neck",
+      "crew-Neck"
     ]
   },
   {
     "executor": "Sleeve.Sew",
     "optionsType": "Length",
     "options": [
-      "Short",
-      "Long"
+      "short",
+      "long"
     ]
   },
   {
