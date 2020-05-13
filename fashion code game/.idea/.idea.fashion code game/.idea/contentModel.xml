@@ -26,6 +26,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CodeEditorController.cs" t="Include" />
+          <e p="ColorChanger.cs" t="Include" />
           <e p="IsometricPlayerMovementController.cs" t="Include" />
           <e p="RandomSpriteGenerator.cs" t="Include" />
         </e>
