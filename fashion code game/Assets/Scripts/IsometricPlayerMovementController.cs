@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class IsometricPlayerMovementController : MonoBehaviour
 {
@@ -23,5 +21,4 @@ public class IsometricPlayerMovementController : MonoBehaviour
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
         _rigidBody2D.MovePosition(newPos);
     }
-}
-        
+}   
