@@ -6,35 +6,35 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class SpriteMaker : MonoBehaviour
 {
-    private SpriteRenderer rend;
+    private SpriteRenderer _spriteRenderer;
 
     public Texture2D[] textureArray;
     public Color[] colorArray;
 
-    private Texture2D tex;
+    private Texture2D _texture;
     
     
     // Start is called before the first frame update
     void Start()
     {
-        rend = GetComponent<SpriteRenderer>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         
         //making texture
-        tex = MakeTexture(textureArray, colorArray);
+        _texture = MakeTexture(textureArray, colorArray);
         
-        rend.sprite = MakeSprite(tex);;
+        _spriteRenderer.sprite = MakeSprite(_texture);
     }
 
     public Texture2D MakeTexture(Texture2D[] layers, Color[] layerColors)
     {
         //create texture
-        Texture2D newTexture = new Texture2D(layers[0].width, layers[0].height);
+        var newTexture = new Texture2D(layers[0].width, layers[0].height);
         
-        Color[] colorArray = new Color[newTexture.width * newTexture.height];
+        var colorsArray = new Color[newTexture.width * newTexture.height];
 
-        Color[][] adjustedLayers = new Color[layers.Length][];
+        var adjustedLayers = new Color[layers.Length][];
 
-        for (int i = 0; i < layers.Length; i++)
+        for (var i = 0; i < layers.Length; i++)
         {
             if (i == 0 || layers[i].width == newTexture.width && layers[i].height == newTexture.height)
             {
@@ -57,14 +57,14 @@ public class SpriteMaker : MonoBehaviour
                 setY = (layers[i].height < newTexture.height) ? (newTexture.height - layers[i].height) / 2 : 0;
                 setHeight = (layers[i].height < newTexture.height) ? layers[i].height : newTexture.height;
 
-                Color[] getPixels = layers[i].GetPixels(getX, getY, getWidth, getHeight);
+                var getPixels = layers[i].GetPixels(getX, getY, getWidth, getHeight);
                 if (layers[i].width >= newTexture.width && layers[i].height >= newTexture.height)
                 {
                     adjustedLayers[i] = getPixels;
                 }
                 else
                 {
-                    Texture2D sizedLayer = ClearTexture(newTexture.width, newTexture.height);
+                    var sizedLayer = ClearTexture(newTexture.width, newTexture.height);
                     sizedLayer.SetPixels(setX, setY, setWidth, setHeight, getPixels);
                     adjustedLayers[i] = sizedLayer.GetPixels();
                 }
@@ -72,13 +72,13 @@ public class SpriteMaker : MonoBehaviour
         }
         
         
-        for (int x = 0; x < newTexture.width; x++) {
-            for (int y = 0; y < newTexture.width; y++)
+        for (var x = 0; x < newTexture.width; x++) {
+            for (var y = 0; y < newTexture.width; y++)
             {
-                int pixelIndex = x + (y * newTexture.width);
-                for (int i = 0; i < layers.Length; i++)
+                var pixelIndex = x + (y * newTexture.width);
+                for (var i = 0; i < layers.Length; i++)
                 {
-                    Color srcPixel = adjustedLayers[i][pixelIndex];
+                    var srcPixel = adjustedLayers[i][pixelIndex];
                     
                     //apply layer color
                     if (srcPixel.r != 0 && srcPixel.a != 0)
@@ -88,15 +88,15 @@ public class SpriteMaker : MonoBehaviour
                     
                     if (srcPixel.a == 1)
                     {
-                        colorArray[pixelIndex] = srcPixel;
+                        colorsArray[pixelIndex] = srcPixel;
                     } else if (srcPixel.a > 0)
                     {
-                        colorArray[pixelIndex] = NormalBlend(colorArray[pixelIndex], srcPixel);
+                        colorsArray[pixelIndex] = NormalBlend(colorsArray[pixelIndex], srcPixel);
                     }
                 }
             }
         }
-        newTexture.SetPixels(colorArray);
+        newTexture.SetPixels(colorsArray);
         newTexture.Apply();
 
         newTexture.wrapMode = TextureWrapMode.Clamp;
@@ -105,17 +105,17 @@ public class SpriteMaker : MonoBehaviour
         return newTexture;
     }
 
-    public Sprite MakeSprite(Texture2D texture)
+    private static Sprite MakeSprite(Texture2D texture)
     {
         return Sprite.Create(texture, new Rect(0,0 ,texture.width, texture.height), Vector2.one * 0.5f);
     }
 
     Color NormalBlend(Color dest, Color src)
     {
-        float srcAlpha = src.a;
-        float destAlpha = (1 - srcAlpha) * dest.a;
-        Color destLayer = dest * destAlpha;
-        Color srcLayer = src * srcAlpha;
+        var srcAlpha = src.a;
+        var destAlpha = (1 - srcAlpha) * dest.a;
+        var destLayer = dest * destAlpha;
+        var srcLayer = src * srcAlpha;
         return destLayer + srcLayer;
     }
 
@@ -128,10 +128,10 @@ public class SpriteMaker : MonoBehaviour
         return pixel * applyColor;
     }
 
-    Texture2D ClearTexture(int width, int height)
+    private static Texture2D ClearTexture(int width, int height)
     {
-        Texture2D clearTexture = new Texture2D(width, height);
-        Color[] clearPixels = new Color[width * height];
+        var clearTexture = new Texture2D(width, height);
+        var clearPixels = new Color[width * height];
         clearTexture.SetPixels(clearPixels);
         return clearTexture;
     }

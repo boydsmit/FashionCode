@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1647744518435238079}
   m_Layer: 0
   m_Name: Core_Particle(Stars)
-  m_TagString: Untagged
+  m_TagString: Particle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4800,7 +4800,7 @@ GameObject:
   - component: {fileID: 1647744518928908709}
   m_Layer: 0
   m_Name: Core_Particle(Spiral)
-  m_TagString: Untagged
+  m_TagString: Particle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9554,7 +9554,7 @@ GameObject:
   - component: {fileID: 1647744519065062864}
   m_Layer: 0
   m_Name: Core_Particle(Smoke)
-  m_TagString: Untagged
+  m_TagString: Particle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

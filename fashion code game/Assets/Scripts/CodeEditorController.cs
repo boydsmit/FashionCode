@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using Clothing;
 using Commands;
@@ -11,7 +12,7 @@ public class CodeEditorController : MonoBehaviour
     private InputField _inputField;
     private List<CommandInfo> _commandInfoList;
     private ClothingManager _clothingManager;
-
+    
     private void Start()
     {
         using (StreamReader r = new StreamReader(@"Assets\Scripts\Commands\Commands.json"))

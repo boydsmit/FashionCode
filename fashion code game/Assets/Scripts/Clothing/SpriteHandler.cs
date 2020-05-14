@@ -15,7 +15,7 @@ namespace Clothing
 
             var instantiatedObject = Instantiate(
                 prefabs[randomPrefab], transform.position, Quaternion.Euler(new Vector2(0, 0)));
-            instantiatedObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+            instantiatedObject.GetComponent<SpriteRenderer>().sortingOrder = -1;
         }
     }
 }
