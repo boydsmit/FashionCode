@@ -68,6 +68,15 @@ public class SpriteMaker : MonoBehaviour
                     sizedLayer.SetPixels(setX, setY, setWidth, setHeight, getPixels);
                     adjustedLayers[i] = sizedLayer.GetPixels();
                 }
+                
+            }
+        }
+
+        for (int i = 0; i < layerColors.Length; i++)
+        {
+            if (layerColors[i].a < 1)
+            {
+                layerColors[i] = new Color(layerColors[i].r, layerColors[i].g, layerColors[i].b, 1);
             }
         }
         
@@ -81,7 +90,7 @@ public class SpriteMaker : MonoBehaviour
                     Color srcPixel = adjustedLayers[i][pixelIndex];
                     
                     //apply layer color
-                    if (srcPixel.r != 0 && srcPixel.a != 0)
+                    if (srcPixel.r != 0 && srcPixel.a != 0 && i < layerColors.Length)
                     {
                         srcPixel = ApplyColorToPixel(srcPixel, layerColors[i]);
                     }
@@ -135,5 +144,5 @@ public class SpriteMaker : MonoBehaviour
         clearTexture.SetPixels(clearPixels);
         return clearTexture;
     }
-    
+
 }
