@@ -17,5 +17,5 @@ public class ColorChanger : MonoBehaviour
         Debug.Log("gay");
     }
     
-    public void 
+   
 }
