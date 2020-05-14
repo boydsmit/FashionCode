@@ -275,7 +275,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 49861eaaa443c6543ba3dad1debcb80b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -310,9 +310,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479229743}
-  - component: {fileID: 479229744}
   - component: {fileID: 479229745}
   - component: {fileID: 479229746}
+  - component: {fileID: 479229744}
   m_Layer: 0
   m_Name: random sprite
   m_TagString: generator
@@ -413,7 +413,8 @@ MonoBehaviour:
   sprite:
   - {fileID: 21300000, guid: a1637e860dff06a42953ec0b3b8d8924, type: 3}
   - {fileID: 21300000, guid: fa10def4936c6cc49a52b7e6d3b403c5, type: 3}
-  particlePrefab: {fileID: 0}
+  particlePrefab: {fileID: 1647744517999941891, guid: 10c2f90ff2e893548bb4960f7b4fb224,
+    type: 3}
 --- !u!1 &556004764
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +628,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: aa6b02f9bb66d3d4ea789222cc9d9e19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1002,7 +1003,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: aa6b02f9bb66d3d4ea789222cc9d9e19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1247,7 +1248,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 85822560819561745868aabfba4318ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1580,7 +1581,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: aa6b02f9bb66d3d4ea789222cc9d9e19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
