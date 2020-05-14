@@ -10,9 +10,9 @@ public class SpriteMaker : MonoBehaviour
 
     public Texture2D[] textureArray;
     public Color[] colorArray;
+    
 
     private Texture2D _texture;
-    
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,12 @@ public class SpriteMaker : MonoBehaviour
         _texture = MakeTexture(textureArray, colorArray);
         
         _spriteRenderer.sprite = MakeSprite(_texture);
+    }
+
+    void ChangeColor(string hexString)
+    {
+        var color = new Color();
+        ColorUtility.TryParseHtmlString (hexString, out color);
     }
 
     public Texture2D MakeTexture(Texture2D[] layers, Color[] layerColors)
@@ -68,7 +74,6 @@ public class SpriteMaker : MonoBehaviour
                     sizedLayer.SetPixels(setX, setY, setWidth, setHeight, getPixels);
                     adjustedLayers[i] = sizedLayer.GetPixels();
                 }
-                
             }
         }
 
@@ -79,7 +84,6 @@ public class SpriteMaker : MonoBehaviour
                 layerColors[i] = new Color(layerColors[i].r, layerColors[i].g, layerColors[i].b, 1);
             }
         }
-        
         
         for (var x = 0; x < newTexture.width; x++) {
             for (var y = 0; y < newTexture.width; y++)
