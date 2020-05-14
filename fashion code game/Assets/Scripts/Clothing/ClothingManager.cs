@@ -18,12 +18,10 @@ namespace Clothing
             switch (sleeveLength)
             {
                 case "long":
-                    PlayParticleOnClick();
                     _clothing.GetComponent<SpriteRenderer>().sprite = sprite[0];
                     break;
                 
                 case "short":
-                    PlayParticleOnClick();
                     _clothing.GetComponent<SpriteRenderer>().sprite = sprite[1];
                     break;
             }
@@ -46,7 +44,7 @@ namespace Clothing
         }
 
 
-        private void PlayParticleOnClick()
+        public void PlayParticleOnClick()
         {
             _timer = false;
             var particles = GameObject.FindGameObjectsWithTag("Particle");

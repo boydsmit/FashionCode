@@ -151,7 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d92388d957d4408b8fb72c9d35a679c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  src: {fileID: 2800000, guid: 6b2cb45011eef4252bef05bed3a0e013, type: 3}
+  textureArray:
+  - {fileID: 2800000, guid: a1637e860dff06a42953ec0b3b8d8924, type: 3}
+  colorArray:
+  - {r: 0.8207547, g: 0.31359026, b: 0.31359026, a: 0}
 --- !u!212 &3245612
 SpriteRenderer:
   m_ObjectHideFlags: 0

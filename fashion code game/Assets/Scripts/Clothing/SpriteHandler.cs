@@ -15,7 +15,16 @@ namespace Clothing
 
             var instantiatedObject = Instantiate(
                 prefabs[randomPrefab], transform.position, Quaternion.Euler(new Vector2(0, 0)));
-            instantiatedObject.GetComponent<SpriteRenderer>().sortingOrder = -1;
+            instantiatedObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        }
+
+        public void ChangeSpiteColor(string hexColorCode)
+        {
+            var sprite = GameObject.FindWithTag("Clothing");
+            var spriteRenderer = sprite.GetComponent<Renderer>();
+    
+            ColorUtility.TryParseHtmlString(hexColorCode, out var color);
+            spriteRenderer.material.color = color;
         }
     }
 }
