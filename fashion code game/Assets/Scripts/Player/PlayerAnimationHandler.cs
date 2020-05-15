@@ -4,29 +4,40 @@ namespace Player
 {
     public class PlayerAnimationHandler : MonoBehaviour
     {
-        
+        private Animator _animator;
+        private void Start()
+        {
+            _animator = gameObject.GetComponent<Animator>();
+        }
+
+
         public void SetPlayerAnimation(float horizontalInput, float verticalInput)
         {
             var movementState = GetDirection(horizontalInput, verticalInput);
             switch (movementState.DisplayValue)
             { 
-                case "Idle":    
+                case "Idle":
+                    _animator.SetBool("IsMoving", false);
                     break;
+                
                 case "Up":
+                    _animator.SetBool("IsMoving", true);
+                    _animator.SetInteger("MovingDirection", 1);
                     break;
+                
                 case "Down":
+                    _animator.SetBool("IsMoving", true);
+                    _animator.SetInteger("MovingDirection", 3);
                     break;
+                
                 case "Left":
+                    _animator.SetBool("IsMoving", true);
+                    _animator.SetInteger("MovingDirection", 2);
                     break;
+                
                 case "Right":
-                    break;
-                case "UpRight":
-                    break;
-                case "UpLeft":
-                    break;
-                case "DownRight":
-                    break;
-                case "DownLeft":
+                    _animator.SetBool("IsMoving", true);
+                    _animator.SetInteger("MovingDirection", 0);
                     break;
             }
         }
