@@ -12,13 +12,15 @@ public class CodeEditorController : MonoBehaviour
     private InputField _inputField;
     private List<CommandInfo> _commandInfoList;
     private ClothingManager _clothingManager;
+    private SpriteHandler _spriteHandler;
     
     private void Start()
     {
-        using (StreamReader r = new StreamReader(@"Assets\Scripts\Commands\Commands.json"))
+        using (var r = new StreamReader(@"Assets\Scripts\Commands\Commands.json"))
         {
-            string json = r.ReadToEnd();
-            _clothingManager = gameObject.GetComponent<ClothingManager>();
+            var json = r.ReadToEnd();
+            _clothingManager = GameObject.FindWithTag("generator").GetComponent<ClothingManager>();
+            _spriteHandler = GameObject.FindWithTag("generator").GetComponent<SpriteHandler>();
             _commandInfoList = JsonConvert.DeserializeObject<List<CommandInfo>>(json);
         }
 
@@ -46,11 +48,11 @@ public class CodeEditorController : MonoBehaviour
 
                     switch (commandInfo.GetExecutor().Split('.')[0])
                     {
-                        //todo: add functions for each case    
                         case "Neck":
                             break;
                         
                         case "Sleeve":
+                            _clothingManager.PlayParticleOnClick();
                             _clothingManager.ChangeSleeve(foundOption);
                             break;
                         
@@ -66,10 +68,11 @@ public class CodeEditorController : MonoBehaviour
                 }
                 else
                 {
-                    if (commandInfo.GetOptionsMap().ContainsKey(parameter))
-                    {
-                        //todo: execute color changer with key value
-                    }
+                    if (!commandInfo.GetOptionsMap().ContainsKey(parameter)) continue;
+                    
+                    commandInfo.GetOptionsMap().TryGetValue(parameter, out var value);
+                    _clothingManager.PlayParticleOnClick();
+                    _spriteHandler.ChangeSpiteColor(value);
                 }
             }
         }
