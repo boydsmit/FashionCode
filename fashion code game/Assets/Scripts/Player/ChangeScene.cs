@@ -14,6 +14,7 @@ public class ChangeScene : MonoBehaviour
         {
             colliding = true;
             Debug.Log("werk");
+            
         }
            
     }
