@@ -22,7 +22,7 @@ public class ShowUI : MonoBehaviour {
     {
         yield return new WaitForSeconds(5);
         Destroy(uiObject);
-        Destroy(gameObject);
+        
     }
     
 }
