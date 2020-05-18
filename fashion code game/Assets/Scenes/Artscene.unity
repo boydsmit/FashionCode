@@ -137,9 +137,10 @@ GameObject:
   - component: {fileID: 60602371}
   - component: {fileID: 60602370}
   - component: {fileID: 60602366}
+  - component: {fileID: 60602372}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,6 +309,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52c9f1bccbf3c4d4f953a212904a7aef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &60602372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60602363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5d871970ac93e4c9d2da7cdea11e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &192510940
@@ -2095,9 +2108,10 @@ GameObject:
   - component: {fileID: 2091605925}
   - component: {fileID: 2091605924}
   - component: {fileID: 2091605926}
+  - component: {fileID: 2091605927}
   m_Layer: 0
   m_Name: PropsTable_Green
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2194,3 +2208,15 @@ EdgeCollider2D:
   - {x: -1.6519434, y: -0.71854025}
   - {x: -1.7548143, y: -0.65472215}
   - {x: -1.8751739, y: 0.82464737}
+--- !u!114 &2091605927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091605923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5d871970ac93e4c9d2da7cdea11e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
