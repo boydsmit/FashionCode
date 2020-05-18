@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ColorChanger : MonoBehaviour
+public class EndLevel : MonoBehaviour
 {
   
     void Start()
@@ -11,10 +11,10 @@ public class ColorChanger : MonoBehaviour
 
     }
 
-    public void RestartScene()
+    public void LoadLevel()
     {
-        SceneManager.LoadScene("ClothesScene");
-        Debug.Log("clothing");
+        SceneManager.LoadScene("Artscene");
+        Debug.Log("art");
     }
     
    
