@@ -5,16 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class EndLevel : MonoBehaviour
 {
-  
+    public GameObject uiObject;
     void Start()
     {
-
+        uiObject.SetActive(false);
     }
-
-    public void LoadLevel()
+   
+    // Update is called once per frame
+    
+    public void ShowDone()
     {
-        SceneManager.LoadScene("Artscene");
+        // SceneManager.LoadScene("Artscene");
         Debug.Log("art");
+        uiObject.SetActive(true);
+        
     }
     
    
