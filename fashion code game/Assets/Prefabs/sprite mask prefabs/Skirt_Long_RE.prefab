@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8051811844822592910}
   m_Layer: 0
   m_Name: Skirt_Long_RE
-  m_TagString: Untagged
+  m_TagString: Clothing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

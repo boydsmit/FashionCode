@@ -1,20 +1,25 @@
 ﻿using System.IO;
 using Newtonsoft.Json;
-using UnityEngine;
-
 
 namespace Clothing.ClothingPresets
 {
-    public class PresetSaver : MonoBehaviour
+    public class PresetManager
     {
-        private void GetPresetValues()
+        private ClothingData GetPreset()
         {
-
+            ClothingData clothingData;
+            
+            using (var streamReader = new StreamReader("Assets/Scripts/Clothing/ClothingPreset/Preset.json"))
+            {
+                var json = streamReader.ReadToEnd();
+                clothingData = JsonConvert.DeserializeObject<ClothingData>(json);
+            }
+            return clothingData;
         }
 
-        private void WriteJsonFile(string clothingBase, string length, string color)
+        public void WriteJsonFile(string clothingBase, string length, string color)
         {
-            using (var streamWriter = File.CreateText(@""))
+            using (var streamWriter = File.CreateText("Assets/Scripts/Clothing/ClothingPresets/Preset.json"))
             using (var jsonWriter = new JsonTextWriter(streamWriter))
             {
                 jsonWriter.WriteStartObject();

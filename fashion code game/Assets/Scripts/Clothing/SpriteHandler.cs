@@ -18,7 +18,7 @@ namespace Clothing
             instantiatedObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
         }
 
-        public void ChangeSpiteColor(string hexColorCode)
+        public void ChangeSpriteColor(string hexColorCode)
         {
             var sprite = GameObject.FindWithTag("Clothing");
             var spriteRenderer = sprite.GetComponent<Renderer>();

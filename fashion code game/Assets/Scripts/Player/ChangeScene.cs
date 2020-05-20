@@ -13,8 +13,6 @@ public class ChangeScene : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             colliding = true;
-            Debug.Log("werk");
-            
         }
            
     }
@@ -25,8 +23,6 @@ public class ChangeScene : MonoBehaviour
         if (colliding == true && Input.GetKeyDown(KeyCode.C))
         {
             SceneManager.LoadScene("ClothesScene");
-            Debug.Log(" hi ");
- 
         }
     }
 }

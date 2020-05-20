@@ -8,21 +8,28 @@ namespace Clothing
     public class ClothingManager : MonoBehaviour
     {
         private GameObject _clothing;
-        [SerializeField] private Sprite[] sprite;
+        [SerializeField] private GameObject[] clothingPrefab;
         [SerializeField] private GameObject particlePrefab;
         private bool _timer;
 
         public void ChangeSleeve(string sleeveLength)
         {
             _clothing =  GameObject.FindWithTag("Clothing");
+            var position = _clothing.transform.position;
+
             switch (sleeveLength)
             {
                 case "long":
-                    _clothing.GetComponent<SpriteRenderer>().sprite = sprite[0];
+                    Instantiate(clothingPrefab[0], new Vector3(position.x,position.y,position.z), Quaternion.identity);
+                    Destroy(_clothing);
+                    //_clothing.GetComponent<SpriteRenderer>().sprite = clothingPrefab[0];
                     break;
                 
                 case "short":
-                    _clothing.GetComponent<SpriteRenderer>().sprite = sprite[1];
+                   
+                    Instantiate(clothingPrefab[1], new Vector3(position.x,position.y,position.z),Quaternion.identity);
+                    Destroy(_clothing);
+                    //_clothing.GetComponent<SpriteRenderer>().sprite = clothingPrefab[1];
                     break;
             }
         }

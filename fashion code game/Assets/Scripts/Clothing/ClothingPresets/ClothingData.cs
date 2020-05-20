@@ -1,12 +1,14 @@
-﻿namespace Clothing.ClothingPresets
-{
-    public class ClothingPreset
-    {
-        private static string _clothingBase;
-        private static string _length;
-        private static string _color;
+﻿using Newtonsoft.Json;
 
-        public ClothingPreset(string clothingBase, string length, string color)
+namespace Clothing.ClothingPresets
+{
+    public class ClothingData
+    {
+        [JsonProperty("Base")]private static string _clothingBase;
+        [JsonProperty("Length")]private static string _length;
+        [JsonProperty("Color")]private static string _color;
+
+        public ClothingData(string clothingBase, string length, string color)
         {
             _clothingBase = clothingBase;
             _length = length;

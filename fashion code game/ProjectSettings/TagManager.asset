@@ -8,6 +8,7 @@ TagManager:
   - Clothing
   - Particle
   - Table
+  - Spawn
   layers:
   - Default
   - TransparentFX
