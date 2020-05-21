@@ -73,7 +73,11 @@ public class CodeEditorController : MonoBehaviour
                     
                     commandInfo.GetOptionsMap().TryGetValue(parameter, out var value);
                     _clothingManager.PlayParticleOnClick();
-                    _spriteHandler.ChangeSpriteColor(value);
+                    if (executor.Contains("1"))
+                    {
+                        _spriteHandler.ChangeSpriteColor(value);
+                    } 
+                    _spriteHandler.ChangePatternColor(value);
                 }
             }
         }
