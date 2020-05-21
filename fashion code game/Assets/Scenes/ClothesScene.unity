@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 8552723984139440889, guid: 1e81b5614c803344089a57fa99275b09, type: 3}
+  - {fileID: 606711405126834853, guid: 11a3217c15df844c8bf5565fd47208a5, type: 3}
 --- !u!212 &479229745
 SpriteRenderer:
   m_ObjectHideFlags: 0

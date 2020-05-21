@@ -504,7 +504,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 611916895}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1195246574}
+        m_MethodName: SetChosenPreset
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 657107632}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &611916895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -975,7 +986,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1069332971}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1195246574}
+        m_MethodName: SetChosenPreset
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 130222675}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1069332971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,7 +1125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1195246572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -1.4505287, z: -5.7486963}
+  m_LocalPosition: {x: 0.45, y: -1.08, z: -5.7486963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 130222676}
@@ -1965,7 +1987,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1862895124}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1195246574}
+        m_MethodName: SetChosenPreset
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 279068310}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1862895124
 MonoBehaviour:
   m_ObjectHideFlags: 0
