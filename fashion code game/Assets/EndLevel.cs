@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Clothing.ClothingPresets;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,16 +11,26 @@ public class EndLevel : MonoBehaviour
     {
         uiObject.SetActive(false);
     }
-   
-    // Update is called once per frame
-    
-    public void ShowDone()
+
+    public void OnButtonClick()
     {
-        // SceneManager.LoadScene("Artscene");
-        Debug.Log("art");
-        uiObject.SetActive(true);
-        
+        var clothingPreset = new ClothingData("T-shirt","Long","#B365E5","tartan","#FFEA45");
+        var madeClothing = GameObject.FindWithTag("Clothing").GetComponent<ClothingData>();
+
+        if (clothingPreset.GetColor() == madeClothing.GetColor() && 
+            clothingPreset.GetLength() == madeClothing.GetLength() &&
+            clothingPreset.GetClothingBase() == madeClothing.GetClothingBase() &&
+             clothingPreset.GetPattern() == madeClothing.GetPattern() &&
+              clothingPreset.GetPatternColor() == madeClothing.GetPatternColor())
+        {
+            uiObject.SetActive(true); 
+        }
+            
+         
+        clothingPreset.GetColor();
     }
+
+
     
    
 }
