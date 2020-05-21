@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 namespace Clothing
@@ -8,7 +9,9 @@ namespace Clothing
     public class ClothingManager : MonoBehaviour
     {
         private GameObject _clothing;
+        private GameObject _pattern;
         [SerializeField] private GameObject[] clothingPrefab;
+        [SerializeField] private GameObject[] patternPrefab;
         [SerializeField] private GameObject particlePrefab;
         private bool _timer;
 
@@ -33,6 +36,42 @@ namespace Clothing
                     break;
             }
         }
+
+        public void ChangePattern(string patterns)
+        {
+            _clothing =  GameObject.FindWithTag("Clothing");
+            var position = _clothing.transform.position;
+            var pattern = GameObject.FindWithTag("Pattern");
+
+            if (pattern != null)
+            {
+                Destroy(pattern);
+            }
+
+            switch (patterns)
+            {
+                case "stripes":
+                    Instantiate(patternPrefab[0], new Vector3(position.x, position.y, position.z), Quaternion.identity);
+                    break;
+                
+                case "dots":
+                    Instantiate(patternPrefab[1], new Vector3(position.x, position.y, position.z), Quaternion.identity);
+                    break;
+                
+                case "stars":
+                    Instantiate(patternPrefab[2], new Vector3(position.x, position.y, position.z), Quaternion.identity);
+                    break;
+                
+                case "flowers":
+                    Instantiate(patternPrefab[3], new Vector3(position.x, position.y, position.z), Quaternion.identity);
+                    break;
+                
+                case "tartan":
+                    Instantiate(patternPrefab[4], new Vector3(position.x, position.y, position.z), Quaternion.identity);
+                    break;
+            }
+        }
+        
 
         private void Update()
         {

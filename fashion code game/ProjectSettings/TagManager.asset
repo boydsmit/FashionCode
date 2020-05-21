@@ -9,6 +9,7 @@ TagManager:
   - Particle
   - Table
   - Spawn
+  - Pattern
   layers:
   - Default
   - TransparentFX

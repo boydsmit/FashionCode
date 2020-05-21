@@ -26,5 +26,14 @@ namespace Clothing
             ColorUtility.TryParseHtmlString(hexColorCode, out var color);
             spriteRenderer.material.color = color;
         }
+        
+        public void ChangePatternColor(string hexColorCode)
+        {
+            var sprite = GameObject.FindWithTag("Pattern");
+            var spriteRenderer = sprite.GetComponent<Renderer>();
+    
+            ColorUtility.TryParseHtmlString(hexColorCode, out var color);
+            spriteRenderer.material.color = color;
+        }
     }
 }

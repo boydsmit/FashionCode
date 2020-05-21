@@ -410,9 +410,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ae89811b54476b85b866a53c37203b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite:
-  - {fileID: 21300000, guid: a1637e860dff06a42953ec0b3b8d8924, type: 3}
-  - {fileID: 21300000, guid: fa10def4936c6cc49a52b7e6d3b403c5, type: 3}
+  clothingPrefab:
+  - {fileID: 4291494548468725681, guid: deb0785ff9499457a844cb41f28cb424, type: 3}
+  - {fileID: 606711405126834853, guid: 11a3217c15df844c8bf5565fd47208a5, type: 3}
+  patternPrefab:
+  - {fileID: 4719823192938014318, guid: 79491978db7fb4ac191373b1bdd35a59, type: 3}
   particlePrefab: {fileID: 1647744517999941891, guid: 10c2f90ff2e893548bb4960f7b4fb224,
     type: 3}
 --- !u!1 &556004764
@@ -2115,9 +2117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ae89811b54476b85b866a53c37203b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite:
-  - {fileID: 21300000, guid: a1637e860dff06a42953ec0b3b8d8924, type: 3}
-  - {fileID: 21300000, guid: fa10def4936c6cc49a52b7e6d3b403c5, type: 3}
+  clothingPrefab: []
+  patternPrefab: []
   particlePrefab: {fileID: 1647744517999941891, guid: 10c2f90ff2e893548bb4960f7b4fb224,
     type: 3}
 --- !u!1 &1608647265

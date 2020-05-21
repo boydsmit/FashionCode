@@ -62,6 +62,8 @@ public class CodeEditorController : MonoBehaviour
                             break;
                         
                         case "pattern":
+                            _clothingManager.PlayParticleOnClick();
+                            _clothingManager.ChangePattern(foundOption);
                             break;
                     }
                 }
