@@ -14,19 +14,27 @@ public class EndLevel : MonoBehaviour
 
     public void OnButtonClick()
     {
-        var clothingPreset = new ClothingData("T-shirt","Long","#B365E5","tartan","#FFEA45");
-        var madeClothing = GameObject.FindWithTag("Clothing").GetComponent<ClothingData>();
+        var clothingPreset = new ClothingData("Shirt","Long","#B365E5","tartan","#FFEA45");
+        var madeClothing = GameObject.FindWithTag("Clothing");
+        var color = ColorUtility.ToHtmlStringRGBA(madeClothing.GetComponent<SpriteRenderer>().color);
+        var clothingName = madeClothing.name.Split('_');
+        var pattern = GameObject.FindWithTag("Pattern");
+        var patternName = "null";
+        var patternColor = "null";
+        
+        if (pattern != null)
+        {
+            patternName = pattern.name.Split('_')[1].Replace("(Clone)", "");
+            patternColor = ColorUtility.ToHtmlStringRGB(pattern.GetComponent<SpriteRenderer>().color);
+        }
 
-        if (clothingPreset.GetColor() == madeClothing.GetColor() && 
-            clothingPreset.GetLength() == madeClothing.GetLength() &&
-            clothingPreset.GetClothingBase() == madeClothing.GetClothingBase() &&
-             clothingPreset.GetPattern() == madeClothing.GetPattern() &&
-              clothingPreset.GetPatternColor() == madeClothing.GetPatternColor())
+        if (clothingPreset.GetColor() == color && clothingPreset.GetLength() == clothingName[1] &&
+            clothingPreset.GetClothingBase() == clothingName[0] && clothingPreset.GetPattern() == patternName &&
+            clothingPreset.GetPatternColor() == patternColor) 
         {
             uiObject.SetActive(true); 
         }
-            
-         
+
         clothingPreset.GetColor();
     }
 

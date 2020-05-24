@@ -61,7 +61,7 @@
   },
   {
     "executor": "color_2.set",
-    "optionsType": "PatternColor",
+    "optionsType": "Color",
     "optionsMap": {
       "purple":"#B365E5",
       "blue":"#4F42F5",

@@ -18,18 +18,9 @@ namespace Clothing
             instantiatedObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
         }
 
-        public void ChangeSpriteColor(string hexColorCode)
+        public void ChangeSpriteColor(string hexColorCode, string part)
         {
-            var sprite = GameObject.FindWithTag("Clothing");
-            var spriteRenderer = sprite.GetComponent<Renderer>();
-    
-            ColorUtility.TryParseHtmlString(hexColorCode, out var color);
-            spriteRenderer.material.color = color;
-        }
-        
-        public void ChangePatternColor(string hexColorCode)
-        {
-            var sprite = GameObject.FindWithTag("Pattern");
+            var sprite = GameObject.FindWithTag(part);
             var spriteRenderer = sprite.GetComponent<Renderer>();
     
             ColorUtility.TryParseHtmlString(hexColorCode, out var color);

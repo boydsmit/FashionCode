@@ -1,9 +1,8 @@
 ﻿using Newtonsoft.Json;
-using UnityEngine;
 
 namespace Clothing.ClothingPresets
 {
-    public class ClothingData : MonoBehaviour
+    public class ClothingData
     {
         [JsonProperty("Base")] private static string _clothingBase;
         [JsonProperty("Length")]private static string _length;

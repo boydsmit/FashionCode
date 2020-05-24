@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ClothesScene.unity
     guid: 9317611438e0c6d42b8abeffc36ecf5c
+  - enabled: 1
+    path: Assets/Scenes/Mail_Scene.unity
+    guid: 6d8dea605eff89f428b9686dd2b73589
   m_configObjects: {}

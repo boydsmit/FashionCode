@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 namespace Clothing
@@ -23,8 +20,10 @@ namespace Clothing
             switch (sleeveLength)
             {
                 case "long":
-                    Instantiate(clothingPrefab[0], new Vector3(position.x,position.y,position.z), Quaternion.identity);
+                    var instantiatedObject = Instantiate(clothingPrefab[0], new Vector3(position.x,position.y,position.z), Quaternion.identity);
+                    instantiatedObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
                     Destroy(_clothing);
+                    
                     //_clothing.GetComponent<SpriteRenderer>().sprite = clothingPrefab[0];
                     break;
                 

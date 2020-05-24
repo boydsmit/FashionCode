@@ -20,7 +20,7 @@ public class ChangeScene : MonoBehaviour
   
     private void Update()
     {
-        if (colliding == true && Input.GetKeyDown(KeyCode.C))
+        if (colliding && Input.GetKeyDown(KeyCode.C))
         {
             SceneManager.LoadScene("ClothesScene");
         }
