@@ -5,7 +5,7 @@ namespace Clothing.ClothingPresets
 {
     public class PresetManager
     {
-        private ClothingData GetPreset()
+        public ClothingData GetPreset()
         {
             ClothingData clothingData;
             

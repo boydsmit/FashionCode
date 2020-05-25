@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class StartGame : MonoBehaviour
-{
 
-    // Update is called once per frame
+public class backButton : MonoBehaviour
+{
     public void StartScene()
     {
         SceneManager.LoadScene("Artscene");
-        Debug.Log("start");
     }
-}
+        
+    }
+

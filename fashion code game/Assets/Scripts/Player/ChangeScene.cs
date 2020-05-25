@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
@@ -22,7 +20,7 @@ public class ChangeScene : MonoBehaviour
     {
         if (colliding && Input.GetKeyDown(KeyCode.C))
         {
-            SceneManager.LoadScene("ClothesScene");
+            SceneManager.LoadScene("ClothingScene");
         }
     }
 }

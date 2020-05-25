@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Clothing.ClothingPresets;
+﻿using Clothing.ClothingPresets;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class EndLevel : MonoBehaviour
 {
+    private readonly PresetManager _presetManager = new PresetManager();
     public GameObject uiObject;
     void Start()
     {
@@ -14,9 +13,9 @@ public class EndLevel : MonoBehaviour
 
     public void OnButtonClick()
     {
-        var clothingPreset = new ClothingData("Shirt","Long","#B365E5","tartan","#FFEA45");
+        var clothingPreset = _presetManager.GetPreset();
         var madeClothing = GameObject.FindWithTag("Clothing");
-        var color = ColorUtility.ToHtmlStringRGBA(madeClothing.GetComponent<SpriteRenderer>().color);
+        var color = ColorUtility.ToHtmlStringRGB(madeClothing.GetComponent<Renderer>().material.color);
         var clothingName = madeClothing.name.Split('_');
         var pattern = GameObject.FindWithTag("Pattern");
         var patternName = "null";
@@ -25,7 +24,7 @@ public class EndLevel : MonoBehaviour
         if (pattern != null)
         {
             patternName = pattern.name.Split('_')[1].Replace("(Clone)", "");
-            patternColor = ColorUtility.ToHtmlStringRGB(pattern.GetComponent<SpriteRenderer>().color);
+            patternColor = ColorUtility.ToHtmlStringRGB(pattern.GetComponent<Renderer>().material.color);
         }
 
         if (clothingPreset.GetColor() == color && clothingPreset.GetLength() == clothingName[1] &&
@@ -34,11 +33,6 @@ public class EndLevel : MonoBehaviour
         {
             uiObject.SetActive(true); 
         }
-
         clothingPreset.GetColor();
     }
-
-
-    
-   
 }
