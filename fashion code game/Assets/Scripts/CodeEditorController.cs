@@ -55,10 +55,14 @@ public class CodeEditorController : MonoBehaviour
                             _clothingManager.ChangeSleeve(foundOption);
                             break;
                         
-                        case "trouserLegs":
+                        case "pants":
+                            _clothingManager.PlayParticleOnClick();
+                            _clothingManager.ChangePants(foundOption);
                             break;
                         
                         case "skirt":
+                            _clothingManager.PlayParticleOnClick();
+                            _clothingManager.ChangeSkirt(foundOption);
                             break;
                         
                         case "pattern":

@@ -9,6 +9,8 @@ namespace Clothing
         private GameObject _pattern;
         [SerializeField] private GameObject[] clothingPrefab;
         [SerializeField] private GameObject[] patternPrefab;
+        [SerializeField] private GameObject[] pantsPrefab;
+        [SerializeField] private GameObject[] skirtPrefab;
         [SerializeField] private GameObject particlePrefab;
         private bool _timer;
 
@@ -23,17 +25,65 @@ namespace Clothing
                     var instantiatedObject = Instantiate(clothingPrefab[0], new Vector3(position.x,position.y,position.z), Quaternion.identity);
                     instantiatedObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
                     Destroy(_clothing);
-                    
-                    //_clothing.GetComponent<SpriteRenderer>().sprite = clothingPrefab[0];
                     break;
                 
                 case "short":
                    
                     Instantiate(clothingPrefab[1], new Vector3(position.x,position.y,position.z),Quaternion.identity);
                     Destroy(_clothing);
-                    //_clothing.GetComponent<SpriteRenderer>().sprite = clothingPrefab[1];
                     break;
             }
+        }
+
+        public void ChangePants(string pants)
+        {
+            _clothing = GameObject.FindWithTag("Clothing");
+            var position = _clothing.transform.position;
+
+            switch (pants)
+            {
+                case "long":
+                    var instantiatedObject = Instantiate(pantsPrefab[0], new Vector3(position.x,position.y,position.z), Quaternion.identity);
+                    instantiatedObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                    Destroy(_clothing);
+                    break;
+                
+                case "medium":
+                    Instantiate(pantsPrefab[1], new Vector3(position.x,position.y,position.z),Quaternion.identity);
+                    Destroy(_clothing);
+                    break;
+                case "short":
+                   
+                    Instantiate(pantsPrefab[2], new Vector3(position.x,position.y,position.z),Quaternion.identity);
+                    Destroy(_clothing);
+                    break;
+            }
+            
+        }
+        
+        public void ChangeSkirt(string skirt)
+        {
+            _clothing = GameObject.FindWithTag("Clothing");
+            var position = _clothing.transform.position;
+
+            switch (skirt)
+            {
+                case "long":
+                    var instantiatedObject = Instantiate(skirtPrefab[0], new Vector3(position.x,position.y,position.z), Quaternion.identity);
+                    instantiatedObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                    Destroy(_clothing);
+                    break;
+                
+                case "medium":
+                    Instantiate(skirtPrefab[1], new Vector3(position.x,position.y,position.z),Quaternion.identity);
+                    Destroy(_clothing);
+                    break;
+                case "short":
+                    Instantiate(skirtPrefab[2], new Vector3(position.x,position.y,position.z),Quaternion.identity);
+                    Destroy(_clothing);
+                    break;
+            }
+            
         }
 
         public void ChangePattern(string patterns)
