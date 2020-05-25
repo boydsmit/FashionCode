@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Artscene.unity
     guid: 679e726494fa5bc48935b022d701ac7c
   - enabled: 1
-    path: Assets/Scenes/ClothesScene.unity
-    guid: 9317611438e0c6d42b8abeffc36ecf5c
-  - enabled: 1
     path: Assets/Scenes/Mail_Scene.unity
     guid: 6d8dea605eff89f428b9686dd2b73589
+  - enabled: 1
+    path: Assets/Scenes/ClothingScene.unity
+    guid: 17bc0e94a2c6b4b45a6f08a889667b42
   m_configObjects: {}
