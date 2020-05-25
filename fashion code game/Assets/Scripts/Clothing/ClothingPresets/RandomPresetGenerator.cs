@@ -51,12 +51,12 @@ namespace Clothing.ClothingPresets
             var clothingName = clothing.name.Split('_');
             var color = ColorUtility.ToHtmlStringRGB(clothing.GetComponent<SpriteRenderer>().color);
             
-            var pattern = clothing.transform.GetChild(0);
             var patternName = "null";
             var patternColor = "null";
             
-            if (pattern != null)
+            if (clothing.transform.childCount > 0)
             {
+                var pattern = clothing.transform.GetChild(0);
                 patternName = pattern.name.Split('_')[1].Replace("(Clone)", "");
                 patternColor = ColorUtility.ToHtmlStringRGB(pattern.GetComponent<SpriteRenderer>().color);
             }

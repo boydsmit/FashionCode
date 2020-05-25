@@ -9,7 +9,7 @@ namespace Clothing.ClothingPresets
         {
             ClothingData clothingData;
             
-            using (var streamReader = new StreamReader("Assets/Scripts/Clothing/ClothingPreset/Preset.json"))
+            using (var streamReader = new StreamReader("Assets/Scripts/Clothing/ClothingPresets/Preset.json"))
             {
                 var json = streamReader.ReadToEnd();
                 clothingData = JsonConvert.DeserializeObject<ClothingData>(json);
@@ -22,6 +22,7 @@ namespace Clothing.ClothingPresets
             using (var streamWriter = File.CreateText("Assets/Scripts/Clothing/ClothingPresets/Preset.json"))
             using (var jsonWriter = new JsonTextWriter(streamWriter))
             {
+                jsonWriter.Formatting = Formatting.Indented;
                 jsonWriter.WriteStartObject();
                 jsonWriter.WritePropertyName("base");
                 jsonWriter.WriteValue(clothingBase);
