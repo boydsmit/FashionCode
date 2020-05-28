@@ -16,8 +16,6 @@
     <explicitExcludes>
       <Path>.idea</Path>
       <Path>Build</Path>
-      <Path>Build.app</Path>
-      <Path>Fashion Code.app</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>
