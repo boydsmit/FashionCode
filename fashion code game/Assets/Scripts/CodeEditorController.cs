@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using Clothing;
 using Commands;
 using Newtonsoft.Json;
@@ -12,14 +11,12 @@ public class CodeEditorController : MonoBehaviour
     private List<CommandInfo> _commandInfoList;
     private ClothingManager _clothingManager;
     private SpriteHandler _spriteHandler;
-
+    
     private void Start()
-    {
-        using (var r = new StreamReader("Assets/Scripts/Commands/Commands.json"))
-        {
-            var json = r.ReadToEnd();
-            _commandInfoList = JsonConvert.DeserializeObject<List<CommandInfo>>(json);
-        }
+    { 
+        var commands = Resources.Load<TextAsset>("Commands");
+
+        _commandInfoList = JsonConvert.DeserializeObject<List<CommandInfo>>(commands.text);
 
         _clothingManager = GameObject.FindWithTag("generator").GetComponent<ClothingManager>();
         _spriteHandler = GameObject.FindWithTag("generator").GetComponent<SpriteHandler>();
