@@ -25,7 +25,7 @@ public class CodeEditorController : MonoBehaviour
 
     public void OnButtonClick()
     {        
-        var codeInputByLine = _inputField.text.Split('\n');
+        var codeInputByLine = _inputField.text.ToLower().Split('\n');
 
         foreach (var codeLine in codeInputByLine)
         {
@@ -42,7 +42,7 @@ public class CodeEditorController : MonoBehaviour
                     var foundOption = commandInfo.GetOptions().Find(option => 
                     option == parameter);
 
-                    switch (commandInfo.GetExecutor().Split('.')[0].ToLower())
+                    switch (commandInfo.GetExecutor().Split('.')[0])
                     {
                         case "neck":
                             break;
