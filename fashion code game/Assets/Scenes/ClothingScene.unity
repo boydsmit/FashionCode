@@ -330,7 +330,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354405031}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1168,7 +1168,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839297273}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1804,7 +1804,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112949354}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2283,7 +2283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.0924, y: 0.000028372}
+  m_AnchoredPosition: {x: 2.0924, y: 13.01}
   m_SizeDelta: {x: 440.62317, y: 45.009743}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1420432806
@@ -2317,7 +2317,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Probeer Sleeve.sew(length)
+  m_Text: Probeer sleeve.sew(length)
 --- !u!222 &1420432807
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2952,7 +2952,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.0924, y: 0.000028372}
+  m_AnchoredPosition: {x: 2.0924, y: 17.64}
   m_SizeDelta: {x: 440.62317, y: 45.009743}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1679014880
@@ -2986,7 +2986,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Probeer color_1.set("#B365E5")
+  m_Text: Probeer color_1.set(blue)
 --- !u!222 &1679014881
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3239,7 +3239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.0924, y: 4.99}
+  m_AnchoredPosition: {x: 2.0924, y: 17.78}
   m_SizeDelta: {x: 440.62317, y: 35.037285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870015828
@@ -3273,7 +3273,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Probeer Skirt.cutto(length)
+  m_Text: Probeer skirt.cut(length)
 --- !u!222 &1870015829
 CanvasRenderer:
   m_ObjectHideFlags: 0
