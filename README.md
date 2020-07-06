@@ -1,29 +1,29 @@
-# README #
+# Fashion Code #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This was the final project of my education. In this project we had to create a game to intrest young girl into programming. 
 
-### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## Documentation
+https://docs.google.com/document/d/1mVQI2C2PEdSs9lUm2JFN9TjmfXHeQb5t7-k5pPMTScQ/edit?usp=sharing (This document is fully written in dutch)
 
-### How do I get set up? ###
+## Download the game
+https://drive.google.com/drive/folders/1JxWKZVlh_M0qZ5mY-VBKJ1wWO5-AxRx-?usp=sharing
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+## My Contribution ##
 
-### Contribution guidelines ###
+### Programming
+- Player movement
+- Code editor
+- JSON
+- Clothing renderer
 
-* Writing tests
-* Code review
-* Other guidelines
+### Documentation
+- Functional Design
+- feasibility
+- Optimalisisation 
+- Sprint retrospectives
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+### Other
+- Art implementation
+- Team management
+- Developer assistance
