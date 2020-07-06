@@ -1,26 +1,32 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChangeScene : MonoBehaviour
+namespace Player
 {
-    
-    bool colliding;
- 
-    void OnCollisionEnter2D(Collision2D collision)
+    public class ChangeScene : MonoBehaviour
     {
-        if (collision.gameObject.tag == "Player")
+        private bool _colliding;
+        [SerializeField] private int scene;
+
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            colliding = true;
+            if (collision.gameObject.tag.Equals("Player"))
+            {
+                _colliding = true;
+            }
         }
-           
-    }
- 
-  
-    private void Update()
-    {
-        if (colliding && Input.GetKeyDown(KeyCode.C))
+
+        public void ChangeScenes()
         {
-            SceneManager.LoadScene("ClothingScene");
+            SceneManager.LoadScene(scene);
+        }
+        
+        private void Update()
+        {
+            if (_colliding && Input.GetKeyDown(KeyCode.C))
+            {
+                ChangeScenes();
+            }
         }
     }
 }

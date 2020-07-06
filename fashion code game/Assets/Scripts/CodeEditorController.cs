@@ -1,23 +1,20 @@
 ﻿using System.Collections.Generic;
 using Clothing;
 using Commands;
-using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CodeEditorController : MonoBehaviour
 {
+    private readonly CommandInfo _commandInfo = new CommandInfo();
     private InputField _inputField;
     private List<CommandInfo> _commandInfoList;
     private ClothingManager _clothingManager;
     private SpriteHandler _spriteHandler;
-    
+
     private void Start()
-    { 
-        var commands = Resources.Load<TextAsset>("Commands");
-
-        _commandInfoList = JsonConvert.DeserializeObject<List<CommandInfo>>(commands.text);
-
+    {
+        _commandInfoList = _commandInfo.GetAllCommandInfos("Commands");
         _clothingManager = GameObject.FindWithTag("generator").GetComponent<ClothingManager>();
         _spriteHandler = GameObject.FindWithTag("generator").GetComponent<SpriteHandler>();
         _inputField = gameObject.GetComponent<InputField>();
@@ -26,7 +23,7 @@ public class CodeEditorController : MonoBehaviour
     public void OnButtonClick()
     {        
         var codeInputByLine = _inputField.text.ToLower().Split('\n');
-
+        
         foreach (var codeLine in codeInputByLine)
         {
             foreach (var commandInfo in _commandInfoList)

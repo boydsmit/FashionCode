@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
+using UnityEngine;
 
 namespace Commands
 {
@@ -28,6 +29,12 @@ namespace Commands
         public Dictionary<string, string> GetOptionsMap()
         {
             return _optionsMap;
+        }
+
+        public List<CommandInfo> GetAllCommandInfos(string fileName)
+        {
+            var commands = Resources.Load<TextAsset>(fileName);
+            return JsonConvert.DeserializeObject<List<CommandInfo>>(commands.text);
         }
     }
 }

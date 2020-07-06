@@ -1,14 +1,5 @@
   [
   {
-    "executor": "neck.sew",
-    "optionsType": "Variants",
-    "options": [
-      "turtleNeck",
-      "v-Neck",
-      "crew-Neck"
-    ]
-  },
-  {
     "executor": "sleeve.sew",
     "optionsType": "Length",
     "options": [
@@ -36,7 +27,7 @@
   },
   {
     "executor": "pattern.set",
-    "optionsType": "patterns",
+    "optionsType": "Patterns",
     "options": [
       "stripes",
       "dots",

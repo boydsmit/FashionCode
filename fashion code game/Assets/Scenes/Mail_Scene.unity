@@ -1045,7 +1045,6 @@ GameObject:
   - component: {fileID: 1077459509}
   - component: {fileID: 1077459508}
   - component: {fileID: 1077459507}
-  - component: {fileID: 1077459510}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1101,18 +1100,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1077459510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077459506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c2bd9a7c9d054f4aba7c16b0c196369, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1195246572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1173,7 @@ GameObject:
   - component: {fileID: 1201841677}
   - component: {fileID: 1201841676}
   - component: {fileID: 1201841675}
+  - component: {fileID: 1201841678}
   m_Layer: 5
   m_Name: Back button
   m_TagString: Untagged
@@ -1255,8 +1243,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1077459510}
-        m_MethodName: StartScene
+      - m_Target: {fileID: 1201841678}
+        m_MethodName: ChangeScenes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1302,6 +1290,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201841673}
   m_CullTransparentMesh: 0
+--- !u!114 &1201841678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201841673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5d871970ac93e4c9d2da7cdea11e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 1
 --- !u!1 &1269191343
 GameObject:
   m_ObjectHideFlags: 0

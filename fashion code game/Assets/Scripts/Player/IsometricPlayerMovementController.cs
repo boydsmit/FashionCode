@@ -26,8 +26,5 @@ namespace Player
             var newPos = currentPos + movement * Time.fixedDeltaTime;
             _rigidBody2D.MovePosition(newPos);
         }
-        
-
-
     }
 }

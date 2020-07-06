@@ -10,7 +10,6 @@ namespace Player
         private static readonly MovementState Left = new MovementState("Left", "-1_1");
         private static readonly MovementState Right = new MovementState("Right", "1_-1");
 
-        
         private readonly string _displayValue;
         private readonly string _key;
         private static readonly MovementState[] All =  {Idle,Up, Down, Left, Right};
