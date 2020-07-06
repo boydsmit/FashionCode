@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - generator
+  - Clothing
+  - Particle
+  - Table
+  - Spawn
+  - Pattern
+  - HelpText
   layers:
   - Default
   - TransparentFX

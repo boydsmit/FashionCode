@@ -1,36 +1,36 @@
 ﻿using System.Collections.Generic;
-using System.IO;
-using Newtonsoft.Json;
+using Clothing;
+using Commands;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CodeEditorController : MonoBehaviour
 {
+    private readonly CommandInfo _commandInfo = new CommandInfo();
     private InputField _inputField;
     private List<CommandInfo> _commandInfoList;
+    private ClothingManager _clothingManager;
+    private SpriteHandler _spriteHandler;
 
     private void Start()
     {
-        using (StreamReader r = new StreamReader(@"Assets\Scripts\Commands\Commands.json"))
-        {
-            string json = r.ReadToEnd();
-            _commandInfoList = JsonConvert.DeserializeObject<List<CommandInfo>>(json);
-        }
-
+        _commandInfoList = _commandInfo.GetAllCommandInfos("Commands");
+        _clothingManager = GameObject.FindWithTag("generator").GetComponent<ClothingManager>();
+        _spriteHandler = GameObject.FindWithTag("generator").GetComponent<SpriteHandler>();
         _inputField = gameObject.GetComponent<InputField>();
     }
 
     public void OnButtonClick()
-    {    
-        var codeInputByLine = _inputField.text.Split('\n');
-
+    {        
+        var codeInputByLine = _inputField.text.ToLower().Split('\n');
+        
         foreach (var codeLine in codeInputByLine)
         {
             foreach (var commandInfo in _commandInfoList)
             {    
                 var executor = commandInfo.GetExecutor() + "(";
                 
-                if (!codeLine.Contains(executor)) continue;
+                if (!codeLine.ToLower().Contains(executor)) continue;
                 
                 var parameter = codeLine.Replace(executor, "");
                 parameter = parameter.Replace(")", "");
@@ -41,31 +41,41 @@ public class CodeEditorController : MonoBehaviour
 
                     switch (commandInfo.GetExecutor().Split('.')[0])
                     {
-                        //todo: add functions for each case
-                        case "Neck":
+                        case "neck":
                             break;
                         
-                        case "Sleeve": 
+                        case "sleeve":
+                            _clothingManager.PlayParticleOnClick();
+                            _clothingManager.ChangeSleeve(foundOption);
                             break;
                         
-                        case "TrouserLegs":
+                        case "pants":
+                            _clothingManager.PlayParticleOnClick();
+                            _clothingManager.ChangePants(foundOption);
                             break;
                         
-                        case "Skirt":
+                        case "skirt":
+                            _clothingManager.PlayParticleOnClick();
+                            _clothingManager.ChangeSkirt(foundOption);
                             break;
                         
-                        case "Pattern":
+                        case "pattern":
+                            _clothingManager.PlayParticleOnClick();
+                            _clothingManager.ChangePattern(foundOption);
                             break;
                     }
-                    print(foundOption);
                 }
                 else
                 {
-                    if (commandInfo.GetOptionsMap().ContainsKey(parameter))
+                    if (!commandInfo.GetOptionsMap().ContainsKey(parameter)) continue;
+                    
+                    commandInfo.GetOptionsMap().TryGetValue(parameter, out var value);
+                    _clothingManager.PlayParticleOnClick();
+                    if (executor.Contains("1"))
                     {
-                        print("color changed to " + parameter);
-                        //todo: execute color changer with key value
-                    }
+                        _spriteHandler.ChangeSpriteColor(value, "Clothing");
+                    } 
+                    _spriteHandler.ChangeSpriteColor(value, "Pattern");
                 }
             }
         }
